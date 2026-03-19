@@ -1,0 +1,227 @@
+.inspector-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.inspector-section {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.inspector-section.disabled {
+  opacity: 0.55;
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.gauge-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+}
+
+.gauge-text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gauge-value {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.gauge-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.probability-bars,
+.shap-rows,
+.node-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.insight-copy {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.prob-row,
+.importance-header,
+.stat-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.prob-label,
+.stat-label,
+.empty-text,
+.empty-subtext,
+.shap-name {
+  color: var(--text-secondary);
+}
+
+.prob-val,
+.stat-val {
+  font-family: var(--font-mono);
+}
+
+.prob-bar-container,
+.shap-bar-wrapper {
+  flex: 1;
+  min-width: 0;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 0 8px;
+}
+
+.prob-bar,
+.shap-bar {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.8s ease;
+}
+
+.fill-red {
+  background: linear-gradient(90deg, #ff2e4c, #ff7b8f);
+}
+
+.fill-safe {
+  background: linear-gradient(90deg, #00e5b5, #60f7d7);
+}
+
+.text-danger {
+  color: var(--accent-secondary);
+}
+
+.text-safe {
+  color: var(--accent-primary);
+}
+
+.empty-inspector {
+  padding: 24px;
+  border: 1px dashed var(--border-color);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.empty-icon {
+  color: var(--text-muted);
+}
+
+.node-detail {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.node-badge {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.badge-claimant {
+  color: #d9c2ff;
+}
+
+.badge-doctor {
+  color: #8dffe9;
+}
+
+.badge-garage {
+  color: #ffd286;
+}
+
+.node-id {
+  margin-top: 12px;
+  font-family: var(--font-display);
+}
+
+.inspector-section {
+  padding: 18px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 18px;
+}
+
+.mt-12 { margin-top: 12px; }
+.mt-16 { margin-top: 16px; }
+.mb-16 { margin-bottom: 16px; }
+.flex-center { display: flex; justify-content: center; }
+
+.shap-row {
+  margin-bottom: 20px;
+}
+
+.shap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+}
+
+.shap-label {
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.shap-val {
+  color: var(--accent-secondary);
+  font-weight: 700;
+}
+
+.shap-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.shap-fill {
+  height: 100%;
+  background: var(--accent-secondary);
+  box-shadow: 0 0 12px var(--accent-secondary);
+  transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+}

@@ -1,0 +1,15 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dimmed-bg-active {
+  /* Specific styling if ring detail requires different layout */
+}

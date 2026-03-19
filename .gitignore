@@ -1,0 +1,47 @@
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Node / frontend
+node_modules/
+dist/
+.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build artifacts / generated outputs
+*.pkl
+*.pt
+*.log
+cleartrace/graph_data.json
+cleartrace/fraud_rings.json
+cleartrace/graph_data.pkl
+cleartrace/trained_model.pkl
+
+# Local caches
+.uv-cache/
+
+# Large / local datasets
+card_transaction.v1.csv
+cleartrace/data/*.csv
+
